@@ -1,0 +1,130 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #edf2f8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-size: 13px;
+    font-family: "Manrope", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+}
+
+
+ul {
+    list-style: none;
+}
+
+.box {
+    width: 50%;
+    background-color: #ffffff;
+    display: flex;
+    border-radius: 15px;
+}
+
+.box>.img {
+    width: 40%;
+    flex-shrink: 0;
+}
+
+.box>.img img {
+    object-fit: cover;
+    height: 100%;
+    display: block;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+}
+
+.box .data {
+    width: 60%;
+    padding: 40px;
+}
+
+.data h1 {
+    font-size: 1.25rem;
+    color: hsl(217, 19%, 35%);
+    margin-bottom: 10px;
+}
+
+.data h1+p {
+    color: hsl(214, 17%, 51%);
+}
+
+.profile {
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+}
+
+.profile p:first-child {
+    color: hsl(217, 19%, 35%)
+}
+
+.profile p:last-child {
+    color: hsl(212, 23%, 69%);
+}
+
+.flex {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.profile img {
+    border-radius: 50%;
+    width: 50px;
+}
+
+.share {
+    position: relative;
+}
+
+.share-btn {
+    border: none;
+    outline: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+}
+
+.share-popup {
+    opacity: 0;
+    pointer-events: none;
+    transition: 0.3s;
+    position: absolute;
+    top: -60px;
+    left: -100px;
+    background-color: hsl(217, 19%, 35%);
+    color: white;
+    padding: 15px 30px;
+    border-radius: 15px;
+    display: flex;
+    column-gap: 5px;
+
+}
+
+.share:has(.share-btn:hover) .share-popup {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.share:has(.share-btn:hover) .share-btn {
+    background-color: hsl(217, 19%, 35%);
+    color: white;
+}
+
+.share ul {
+    display: flex;
+    column-gap: 5px;
+    align-items: center;
+}
